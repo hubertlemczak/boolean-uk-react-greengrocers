@@ -58,14 +58,14 @@
   {
     "id": "009-blueberry",
     "name": "blueberry",
-    "price": 0.9,
+    "price": 12,
     "type": "fruit",
     "body": "Blueberries are a widely distributed and widespread group of perennial flowering plants with blue or purple berries. They are classified in the section Cyanococcus within the genus Vaccinium. Vaccinium also includes cranberries, bilberries, huckleberries and Madeira blueberries."
   },
   {
     "id": "010-aubergine",
     "name": "aubergine",
-    "price": 1,
+    "price": 10,
     "type": "fruit",
     "body": "Eggplant, aubergine or brinjal is a plant species in the nightshade family Solanaceae. Solanum melongena is grown worldwide for its edible fruit. Most commonly purple, the spongy, absorbent fruit is used in several cuisines. Typically used as a vegetable in cooking, it is a berry by botanical definition."
   }

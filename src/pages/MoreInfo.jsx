@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { capitaliseFirstLetter } from '../utilities/capitaliseFirstLetter';
-import storeItems from '../store-items.json';
+import storeItems from '../data/store-items.json';
 import { formatPath } from '../utilities/formatPath';
 
 export const MoreInfo = () => {
@@ -8,7 +8,7 @@ export const MoreInfo = () => {
   const item = storeItems.find(
     (item) => formatPath(item.name) === currentWindow
   );
-  return (
+  return item ? (
     <div className="more-info-container">
       <h1>{capitaliseFirstLetter(item.name)}</h1>
       <div className="more-info-img">
@@ -21,5 +21,7 @@ export const MoreInfo = () => {
       </div>
       <p className="more-info-body">{item.body}</p>
     </div>
+  ) : (
+    <h1 style={{ textAlign: 'center', marginTop: 100 }}>Page Not Found</h1>
   );
 };

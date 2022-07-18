@@ -24,11 +24,9 @@ button {
 /* Store */
 
 #store {
-  height: 40vh;
+  height: 60vh;
   padding: 1rem;
-
-  overflow-y: scroll;
-
+  /* overflow-y: scroll; */
   background-color: #e7f4ea;
 }
 
@@ -223,4 +221,16 @@ button {
 .more-info-body {
   font-size: 1.1rem;
   line-height: 2;
+}
+
+.filterForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.filters-select {
+  height: 30px;
+  margin-right: 20px;
 }

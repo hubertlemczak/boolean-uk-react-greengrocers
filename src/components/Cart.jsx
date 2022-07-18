@@ -1,6 +1,15 @@
 import { CartItem } from './CartItem';
+import storeItems from '../data/store-items.json';
 
 export const Cart = ({ cartItems, setCartItems }) => {
+  const getTotal = () =>
+    cartItems
+      .reduce((acc, cartItem) => {
+        const item = storeItems.find((i) => i.id === cartItem.id);
+        return acc + cartItem.quantity * item.price;
+      }, 0)
+      .toFixed(2);
+
   return (
     <main id="cart">
       <h2>Your Cart</h2>
@@ -16,7 +25,7 @@ export const Cart = ({ cartItems, setCartItems }) => {
           <h3>Total</h3>
         </div>
         <div>
-          <span className="total-number">£0.00</span>
+          <span className="total-number">£{getTotal()}</span>
         </div>
       </div>
     </main>

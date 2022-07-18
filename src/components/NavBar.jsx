@@ -11,7 +11,7 @@ export const NavBar = () => {
           </Link>
         )}
         <Link to="/">
-          <h1>GreenGrocers</h1>
+          <h1>Greengrocers</h1>
         </Link>
       </div>
       <Outlet />

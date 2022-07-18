@@ -1,37 +1,21 @@
-import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-
-import { useLocalStorage } from './hooks/useLocalStorage';
-
 import './styles/reset.css';
 import './styles/index.css';
 
-import initialStoreItems from './store-items';
+import { Routes, Route, useLocation } from 'react-router-dom';
+
 import { NavBar } from './components/NavBar';
 import { Home } from './pages/Home';
 import { MoreInfo } from './pages/MoreInfo';
 
 export default function App() {
-  const [storeItems] = useState(initialStoreItems);
-  const [cartItems, setCartItems] = useLocalStorage('cartItems', []);
-  const [path, setPath] = useLocalStorage('path', '');
-
+  const currentWindow = useLocation().pathname;
   return (
-    <Routes>
-      <Route path="/" element={<NavBar />}>
-        <Route
-          index
-          element={
-            <Home
-              storeItems={storeItems}
-              cartItems={cartItems}
-              setCartItems={setCartItems}
-              setPath={setPath}
-            />
-          }
-        />
-        <Route path={`/${path}`} element={<MoreInfo />} />
-      </Route>
-    </Routes>
+    <>
+      <NavBar />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path={currentWindow} element={<MoreInfo />} />
+      </Routes>
+    </>
   );
 }

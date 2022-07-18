@@ -1,17 +1,17 @@
-import storeItems from '../store-items';
+import storeItems from '../data/store-items';
+import { capitaliseFirstLetter } from '../utilities/capitaliseFirstLetter';
 
 export const CartItem = ({ id, quantity, setCartItems }) => {
   const item = storeItems.find((item) => item.id === id);
 
-  const incrementQuantity = (id) => {
+  const incrementQuantity = (id) =>
     setCartItems((currentCartItems) =>
       currentCartItems.map((item) =>
         item.id === id ? { ...item, quantity: item.quantity + 1 } : item
       )
     );
-  };
 
-  const decrementQuantity = (id) => {
+  const decrementQuantity = (id) =>
     setCartItems((currentCartItems) =>
       currentCartItems
         .map((item) =>
@@ -19,7 +19,6 @@ export const CartItem = ({ id, quantity, setCartItems }) => {
         )
         .filter((item) => item.quantity !== 0)
     );
-  };
 
   return (
     <li>
@@ -28,7 +27,7 @@ export const CartItem = ({ id, quantity, setCartItems }) => {
         src={`assets/icons/${item.id}.svg`}
         alt={item.name}
       />
-      <p>{item.name}</p>
+      <p>{capitaliseFirstLetter(item.name)}</p>
       <button
         className="quantity-btn remove-btn center"
         onClick={() => decrementQuantity(id)}
