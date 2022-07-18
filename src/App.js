@@ -1,61 +1,22 @@
-import './styles/reset.css'
-import './styles/index.css'
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-import initialStoreItems from './store-items'
+import './styles/reset.css';
+import './styles/index.css';
 
-/*
-Here's what a store item should look like
-{
-  id: '001-beetroot',
-  name: 'beetroot',
-  price: 0.35
-}
-
-What should a cart item look like? 🤔
-*/
-
-console.log(initialStoreItems)
+import initialStoreItems from './store-items';
+import { Store } from './components/Store';
+import { Cart } from './components/Cart';
 
 export default function App() {
-  // Setup state here...
+  const [storeItems] = useState(initialStoreItems);
+  const [cartItems, setCartItems] = useState([]);
+  console.log(cartItems);
 
   return (
-    <>
-      <header id="store">
-        <h1>Greengrocers</h1>
-        <ul className="item-list store--item-list">
-          {/* Wrtite some code here... */}
-        </ul>
-      </header>
-      <main id="cart">
-        <h2>Your Cart</h2>
-        <div className="cart--item-list-container">
-          <ul className="item-list cart--item-list">
-            {/* Wrtite some code here... */}
-          </ul>
-        </div>
-        <div className="total-section">
-          <div>
-            <h3>Total</h3>
-          </div>
-          <div>
-            <span className="total-number">£0.00</span>
-          </div>
-        </div>
-      </main>
-      <div>
-        Icons made by
-        <a
-          href="https://www.flaticon.com/authors/icongeek26"
-          title="Icongeek26"
-        >
-          Icongeek26
-        </a>
-        from
-        <a href="https://www.flaticon.com/" title="Flaticon">
-          www.flaticon.com
-        </a>
-      </div>
-    </>
-  )
+    <Routes>
+      <Store storeItems={storeItems} setCartItems={setCartItems} />
+      <Cart cartItems={cartItems} setCartItems={setCartItems} />
+    </Routes>
+  );
 }

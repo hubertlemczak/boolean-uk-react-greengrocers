@@ -1,0 +1,72 @@
+[
+  {
+    "id": "001-beetroot",
+    "name": "beetroot",
+    "price": 0.1,
+    "type": "veg",
+    "body": "The beetroot is the taproot portion of a beet plant, usually known in North America as beets while the vegetable is referred to as beetroot in British English, and also known as the table beet, garden beet, red beet, dinner beet or golden beet."
+  },
+  {
+    "id": "002-carrot",
+    "name": "carrot",
+    "price": 0.2,
+    "type": "veg",
+    "body": "The carrot is a root vegetable, typically orange in color, though purple, black, red, white, and yellow cultivars exist, all of which are domesticated forms of the wild carrot, Daucus carota, native to Europe and Southwestern Asia."
+  },
+  {
+    "id": "003-apple",
+    "name": "apple",
+    "price": 0.3,
+    "type": "fruit",
+    "body": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today."
+  },
+  {
+    "id": "004-apricot",
+    "name": "apricot",
+    "price": 0.4,
+    "type": "fruit",
+    "body": "An apricot is a fruit, or the tree that bears the fruit, of several species in the genus Prunus. Usually, an apricot is from the species P. armeniaca, but the fruits of the other species in Prunus sect. Armeniaca are also called apricots"
+  },
+  {
+    "id": "005-avocado",
+    "name": "avocado",
+    "price": 0.5,
+    "type": "fruit",
+    "body": "The avocado is a tree originating in the Americas which is likely native to the highland regions of south-central Mexico to Guatemala. It is classified as a member of the flowering plant family Lauraceae. The fruit of the plant, also called an avocado, is botanically a large berry containing a single large seed."
+  },
+  {
+    "id": "006-bananas",
+    "name": "bananas",
+    "price": 0.6,
+    "type": "fruit",
+    "body": "A banana is an elongated, edible fruit - botanically a berry - produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called \"plantains\", distinguishing them from dessert bananas."
+  },
+  {
+    "id": "007-bell-pepper",
+    "name": "bell pepper",
+    "price": 0.7,
+    "type": "fruit",
+    "body": "The bell pepper is the fruit of plants in the Grossum Group of the species Capsicum annuum. Cultivars of the plant produce fruits in different colors, including red, yellow, orange, green, white, chocolate, candy cane striped, and purple."
+  },
+  {
+    "id": "008-cherry",
+    "name": "cherry",
+    "price": 0.8,
+    "type": "fruit",
+    "body": "A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe. Commercial cherries are obtained from cultivars of several species, such as the sweet Prunus avium and the sour Prunus cerasus."
+  },
+  {
+    "id": "009-blueberry",
+    "name": "blueberry",
+    "price": 0.9,
+    "type": "fruit",
+    "body": "Blueberries are a widely distributed and widespread group of perennial flowering plants with blue or purple berries. They are classified in the section Cyanococcus within the genus Vaccinium. Vaccinium also includes cranberries, bilberries, huckleberries and Madeira blueberries."
+  },
+  {
+    "id": "010-aubergine",
+    "name": "aubergine",
+    "price": 1,
+    "type": "fruit",
+    "body": "Eggplant, aubergine or brinjal is a plant species in the nightshade family Solanaceae. Solanum melongena is grown worldwide for its edible fruit. Most commonly purple, the spongy, absorbent fruit is used in several cuisines. Typically used as a vegetable in cooking, it is a berry by botanical definition."
+  }
+]
