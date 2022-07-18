@@ -1,4 +1,7 @@
-export const StoreItem = ({ item, setCartItems }) => {
+import { Link } from 'react-router-dom';
+import { formatPath } from '../utilities/formatPath';
+
+export const StoreItem = ({ item, setCartItems, setPath }) => {
   const addItemToCart = (id) => {
     setCartItems((currentCartItems) => {
       if (currentCartItems.find((x) => x.id === id)) {
@@ -10,12 +13,15 @@ export const StoreItem = ({ item, setCartItems }) => {
       }
     });
   };
-
   return (
     <li>
-      <div className="store--item-icon">
+      <Link
+        onClick={() => setPath(formatPath(item.name))}
+        to={`/${formatPath(item.name)}`}
+        className="store--item-icon"
+      >
         <img src={`/assets/icons/${item.id}.svg`} alt={item.name} />
-      </div>
+      </Link>
       <button onClick={() => addItemToCart(item.id)}>Add to cart</button>
     </li>
   );
