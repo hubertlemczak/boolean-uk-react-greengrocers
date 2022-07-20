@@ -3,6 +3,8 @@ import { capitaliseFirstLetter } from '../utilities/capitaliseFirstLetter';
 import storeItems from '../data/store-items.json';
 import { formatPath } from '../utilities/formatPath';
 
+import './MoreInfo.scss';
+
 export const MoreInfo = () => {
   const currentWindow = useLocation().pathname.substring(1);
   const item = storeItems.find(
@@ -11,6 +13,10 @@ export const MoreInfo = () => {
   return item ? (
     <div className="more-info-container">
       <h1>{capitaliseFirstLetter(item.name)}</h1>
+      <p>
+        <small>£</small>
+        {item.price}
+      </p>
       <div className="more-info-img">
         <img
           className="more-info-img"

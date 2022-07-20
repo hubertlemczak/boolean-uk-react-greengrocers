@@ -3,11 +3,13 @@ import initialStoreItems from '../data/store-items';
 import { Filters } from './Filters';
 import { StoreItem } from './StoreItem';
 
+import './Store.scss';
+
 export const Store = ({ setCartItems }) => {
   const [storeItems] = useState(initialStoreItems);
   const [filter, setFilter] = useState({ isOn: false, value: '' });
   const [sort, setSort] = useState({ isOn: false, value: '' });
-  
+
   let filteredItems = [...storeItems];
 
   const sortItems = () => {
@@ -19,7 +21,8 @@ export const Store = ({ setCartItems }) => {
     if (sort.value === 'High-Low') return sortByPrice.reverse();
   };
 
-  if (filter.isOn) filteredItems = filteredItems.filter((item) => item.type === filter.value);
+  if (filter.isOn)
+    filteredItems = filteredItems.filter((item) => item.type === filter.value);
   if (sort.isOn) filteredItems = sortItems();
 
   return (

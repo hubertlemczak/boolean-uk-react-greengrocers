@@ -1,6 +1,8 @@
 import { CartItem } from './CartItem';
 import storeItems from '../data/store-items.json';
 
+import './Cart.scss';
+
 export const Cart = ({ cartItems, setCartItems }) => {
   const getTotal = () =>
     cartItems

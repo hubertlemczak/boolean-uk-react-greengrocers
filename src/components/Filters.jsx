@@ -1,6 +1,12 @@
+import './Filters.scss';
+
 export const Filters = ({ filter, setFilter, sort, setSort }) => {
-  const updateFilter = (value) => !value ? setFilter({ isOn: false, value }) : setFilter({ isOn: true, value });
-  const updateSort = (value) => !value ? setSort({ isOn: false, value }) : setSort({ isOn: true, value });
+  const updateFilter = (value) =>
+    !value
+      ? setFilter({ isOn: false, value })
+      : setFilter({ isOn: true, value });
+  const updateSort = (value) =>
+    !value ? setSort({ isOn: false, value }) : setSort({ isOn: true, value });
 
   return (
     <form className="filterForm">
@@ -30,13 +36,15 @@ export const Filters = ({ filter, setFilter, sort, setSort }) => {
         <option value="Low-High">Low - High</option>
         <option value="High-Low">High - Low</option>
       </select>
-      <button 
-        type='reset' 
+      <button
+        type="reset"
         onClick={() => {
           updateFilter();
-          updateSort()
+          updateSort();
         }}
-      >Reset Filters</button>
+      >
+        Reset Filters
+      </button>
     </form>
   );
 };

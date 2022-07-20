@@ -1,0 +1,15 @@
+.more-info-container {
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+
+  .more-info-img {
+    display: grid;
+    place-items: center;
+  }
+
+  .more-info-body {
+    font-size: 1.1rem;
+    line-height: 2;
+  }
+}

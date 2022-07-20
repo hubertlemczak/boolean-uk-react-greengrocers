@@ -1,5 +1,7 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
+import './NavBar.scss';
+
 export const NavBar = () => {
   const path = useLocation().pathname;
   return (

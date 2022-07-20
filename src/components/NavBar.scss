@@ -1,0 +1,24 @@
+.nav-bar {
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgb(224, 224, 224);
+  text-align: center;
+
+  .back-Link {
+    position: absolute;
+    transform: translateY(50%);
+    left: 20px;
+  }
+
+  h1 {
+    position: relative;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
